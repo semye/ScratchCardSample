@@ -1,5 +1,6 @@
-package com.semye.scratchcard;
+package com.yesheng.scratch;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -86,19 +87,14 @@ public class ScratchView extends View {
         int count = typedArray.getIndexCount();
         for (int i = 0; i < count; i++) {
             int attr = typedArray.getIndex(i);
-            switch (attr) {
-                case R.styleable.ScratchView_bottom_text:
-                    mBottomText = typedArray.getString(attr);
-                    break;
-                case R.styleable.ScratchView_top_text:
-                    mTopText = typedArray.getString(attr);
-                    break;
-                case R.styleable.ScratchView_textColor:
-                    mTextColor = typedArray.getColor(attr, Color.BLACK);
-                    break;
-                case R.styleable.ScratchView_textSize:
-                    mTextSize = typedArray.getDimension(attr, 15);
-                    break;
+            if (attr == R.styleable.ScratchView_bottom_text) {
+                mBottomText = typedArray.getString(attr);
+            } else if (attr == R.styleable.ScratchView_top_text) {
+                mTopText = typedArray.getString(attr);
+            } else if (attr == R.styleable.ScratchView_textColor) {
+                mTextColor = typedArray.getColor(attr, Color.BLACK);
+            } else if (attr == R.styleable.ScratchView_textSize) {
+                mTextSize = typedArray.getDimension(attr, 15);
             }
         }
         typedArray.recycle();
@@ -200,6 +196,7 @@ public class ScratchView extends View {
         mCanvas.drawBitmap(bottomBitmap, null, new Rect(0, 0, width, height), null);
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         int x = (int) event.getX();

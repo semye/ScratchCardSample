@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!--设置自定义控件的属性-->
     <declare-styleable name="ScratchView">
         <attr name="bottom_text" format="string" />
         <attr name="top_text" format="string" />
