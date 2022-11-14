@@ -129,7 +129,7 @@ public class ScratchView extends View {
         if (mBottomText == null) mBottomText = BOTTOM_TEXT;
         if (mTopText == null) mTopText = TOP_TEXT;
         mTextPaint = PaintUtils.getTextPaint(mTextColor, mTextSize);
-        mEraserPaint = PaintUtils.getEarser();
+        mEraserPaint = PaintUtils.getEraser();
     }
 
     @Override

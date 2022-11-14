@@ -8,7 +8,7 @@ import android.graphics.Paint;
  */
 public class PaintUtils {
 
-    public static Paint getEarser() {
+    public static Paint getEraser() {
         Paint paint = new Paint();
         paint.setColor(Color.parseColor("#c0c0c0"));
         paint.setAntiAlias(true);// 抗锯齿
