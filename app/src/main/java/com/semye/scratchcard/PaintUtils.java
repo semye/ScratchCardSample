@@ -1,4 +1,4 @@
-package com.yesheng.scratch;
+package com.semye.scratchcard;
 
 import android.graphics.Color;
 import android.graphics.Paint;

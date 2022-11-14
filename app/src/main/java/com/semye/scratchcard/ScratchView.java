@@ -1,4 +1,4 @@
-package com.yesheng.scratch;
+package com.semye.scratchcard;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
@@ -126,10 +126,8 @@ public class ScratchView extends View {
     private void init() {
         mPath = new Path();
         mTextBound = new Rect();
-        if (mBottomText == null)
-            mBottomText = BOTTOM_TEXT;
-        if (mTopText == null)
-            mTopText = TOP_TEXT;
+        if (mBottomText == null) mBottomText = BOTTOM_TEXT;
+        if (mTopText == null) mTopText = TOP_TEXT;
         mTextPaint = PaintUtils.getTextPaint(mTextColor, mTextSize);
         mEraserPaint = PaintUtils.getEarser();
     }
@@ -142,10 +140,8 @@ public class ScratchView extends View {
         int height = getHeight();
 
 
-        if (bottomBitmap == null)
-            drawBottom(width, height);
-        if (topBitmap == null)
-            drawTop(width, height);
+        if (bottomBitmap == null) drawBottom(width, height);
+        if (topBitmap == null) drawTop(width, height);
 
 
         if (isComplete) {
@@ -154,8 +150,7 @@ public class ScratchView extends View {
                 mListener.complete();
             }
         }
-        if (bottomBitmap != null)
-            canvas.drawBitmap(bottomBitmap, 0, 0, null);
+        if (bottomBitmap != null) canvas.drawBitmap(bottomBitmap, 0, 0, null);
 
         if ((!isComplete) && topBitmap != null) {
             drawPath();

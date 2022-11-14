@@ -4,8 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
-import com.yesheng.scratch.ScratchView;
-
 public class MainActivity extends AppCompatActivity implements ScratchView.OnScratchCompleteListener {
 
     ScratchView view;
